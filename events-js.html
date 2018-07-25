@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Events JS</title>
+</head>
+<body>
+	<form method="post" action="">
+		User Name: <input type="text" name="username" id="username"><br>
+		Password: <input type="text" name="pass" id="password"><br>
+		Re-Password: <input type="text" name="re-pass" id="re-password"><br>
+		<input type="submit" name="btnComfirm" onclick="return checkInput()" value="Comfirm">
+	</form>
+	<script>
+		function checkInput() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+			var re_password = document.getElementById("re-password").value;
+
+			if (username == "") {
+				alert('User name not null.');
+				return false;
+			}
+			if (password == "") {
+				alert("Password not null.");
+				return false;
+			}
+			if(password != re_password){
+				alert("password != re-password");
+				return false;
+			}
+			alert("Okay.");
+			return true;
+		}
+		// if(checkInput()){
+		// 	document.write("Okay.");
+		// }else{
+		// 	document.write("Fail.");
+		// }
+	</script>
+	<hr>
+	A: <input type="text" name="a" id="a"><br>
+	B: <input type="text" name="b" id="b"><br>
+	Sum: <p id="sum"></p>
+	<input type="button" name="btn" id="btn" onclick="sum()" value="Sum">
+	<script>
+		function sum(){
+			var a = parseInt(document.getElementById('a').value);
+			var b = parseInt(document.getElementById('b').value);
+			var sum = document.getElementById("sum");
+			sum.innerHTML = a+b;
+		}
+	</script>
+	<hr>
+	<button onclick="fn01()">Click</button>
+	<script>
+		function fn01() {
+			document.write("Call?");
+		}
+	</script>
+</body>
+</html>

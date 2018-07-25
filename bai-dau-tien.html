@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>First Lession</title>
+</head>
+<body>
+	<input type="button" value="Click here" id="btnClick">
+	<script>
+		document.write("First Lession.");
+		var btn = document.getElementById('btnClick');
+		btn.addEventListener('click', function(){
+            alert('Thank for click.');
+            document.write("Thanks!");
+        });
+	</script>
+	<hr>
+	<p id="name" onclick="wyn()">What your name?</p>
+	<script>
+		//Variables in JS
+        var name = "VSond";
+        document.write(name);
+        function wyn() {
+        	// body...
+        	document.getElementById('name').innerHTML = "My name is Son.";
+        }
+	</script>
+	<hr>
+	<input type="button" id="first" value="Click now" onclick="hello()">
+	<script>
+		// alert() - confirm() - prompt()
+		function hello() {
+			// body...
+			alert("You has click button.");
+		}
+		//var result = confirm("Do you like?");
+		//alert(result);
+
+		//var result2 = prompt("What your name?","");
+		//document.write(result2);
+		//var a = prompt("A: ","");
+		//var b = prompt("B: ","");
+		//var c = parseInt(a)+parseInt(b);
+		//document.write(c);
+	</script>
+	<hr>
+	<script>
+		//Operators in javascript
+		console.log("Hello");
+		console.log(true && true);
+	</script>
+	<hr>
+	<script>
+		// if and if else in JS
+		// var x = prompt("Enter a number: ","");
+		// if (parseInt(x) % 2 == 0) {
+		// 	alert("Even number");
+		// } else{
+		// 	alert("Odd number");
+		// }
+	</script>
+	<hr>
+	<script>
+		//switch in JS
+		//var x = parseInt(prompt("Enter a number: ",""));
+		switch(x){
+			case 1:
+			alert("One");
+			break;
+			default:
+			alert("Your number not number.");
+			break;
+		}
+	</script>
+</body>
+</html>

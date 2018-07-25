@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM JS</title>
+</head>
+<body>
+	<!-- Change content HTML by getID !-->
+	<p id="content">Content default</p>
+	<input type="button" name="btn" value="Change p" id="btn">
+	<script>
+		function changeContent() {
+			var ct = document.getElementById('content');
+			ct.innerHTML = 'Content had Changed.';
+		}
+		var btn = document.getElementById('btn');
+		btn.addEventListener('click', function() {
+			changeContent();
+		});
+	</script>
+	<hr>
+	<!-- Get content tag p by css selector!-->
+	<p class="web">Tag p had class by "web"</p>
+	<div>
+		<p class="web">Tag p in tag div</p>
+		<p>Tag p in tag div not class</p>
+	</div>
+	<p id="result"></p>
+	<input type="button" name="getByClass" id="btnGetByClass" value="Get by class">
+	<script>
+		//var get = null;
+		var btn = document.getElementById("btnGetByClass");
+		btn.addEventListener('click', function() {
+			var get = document.querySelectorAll("div p.web");
+			document.getElementById('result').innerHTML = "Content get: "+get[0].innerHTML;
+		});
+		
+	</script>
+</body>
+</html>

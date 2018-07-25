@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Function JS</title>
+</head>
+<body>
+	<script>
+		var a = 10;
+		// func check a number is even or odd
+		function checkNumber(number) {
+			// body...
+			if (number % 2 == 0) {
+				alert(number+' is even number.');
+			}else{
+				alert(number+' is odd number.');
+			}
+		}
+		//checkNumber(a);
+		// func find max of two number
+		function findMax(num1, num2) {
+			// body...
+			if (num1 > num2) {
+				return num1;
+			}else{
+				return num2;
+			}
+		}
+		//alert("Max(12,25) = "+findMax(12,25));
+		// variables all and variables in function
+		function varAllAndVarInFunc() {
+			var a = 15;
+			alert(a);
+		}
+		//varAllAndVarInFunc();
+		//alert(a);
+
+		//setTimeout() and setInterval()
+		var fn = function notif() {
+			alert("This is a notif.");
+		}
+		//setTimeout(fn,3000);
+		var fn2 = function notif2(){
+			alert("This is a notif.");
+		}
+		//setInterval(fn2, 2000);
+
+		// count even number 1 up to 100
+		function countEven1UpTo100() {
+			var count = 0;
+			for (var i = 0; i < 100; i++) {
+			if (i%2==0) {
+				count++;
+				}
+			}
+			return count;
+		}
+		//alert("1 up to 100 had " + countEven1UpTo100()+" even number.");
+	</script>
+</body>
+</html>
